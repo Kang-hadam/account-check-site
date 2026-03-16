@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>공금 관리 현황</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <div>
+          <h1>공금 관리 현황</h1>
+          <p class="subtitle">입주민 공금 입금·지출·잔액 정리</p>
+        </div>
+      </header>
+
+      <main>
+        <section class="summary-card">
+          <div class="summary-item">
+            <span class="label">총 입금액</span>
+            <span id="totalIncome" class="value">-</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">총 지출액</span>
+            <span id="totalExpense" class="value">-</span>
+          </div>
+          <div class="summary-item highlight">
+            <span class="label">현재 잔액</span>
+            <span id="currentBalance" class="value">-</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <header class="card-header">
+            <h2>세대별 입금 현황</h2>
+            <p class="card-description">
+              101~104호, 201~204호, 301~304호, 401~405호의 공금 납부 내역입니다.
+            </p>
+          </header>
+
+          <div class="tabs">
+            <button class="tab-button active" data-floor="all">전체</button>
+            <button class="tab-button" data-floor="1">1층</button>
+            <button class="tab-button" data-floor="2">2층</button>
+            <button class="tab-button" data-floor="3">3층</button>
+            <button class="tab-button" data-floor="4">4층</button>
+          </div>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>호수</th>
+                  <th>입금액 (원)</th>
+                  <th>비고</th>
+                </tr>
+              </thead>
+              <tbody id="paymentsTableBody">
+                <!-- JS로 채워집니다 -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card">
+          <header class="card-header">
+            <h2>지출 내역</h2>
+            <p class="card-description">집수리 및 기타 공금 사용 내역입니다.</p>
+          </header>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>날짜</th>
+                  <th>항목</th>
+                  <th>내용</th>
+                  <th>금액 (원)</th>
+                </tr>
+              </thead>
+              <tbody id="expensesTableBody">
+                <!-- JS로 채워집니다 -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <span>입주민 대표 공금 관리용 내부 페이지</span>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
