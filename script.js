@@ -4,7 +4,7 @@
 const payments = [
   // 1층
   { unit: "101호", floor: 1, amount: 0, note: "이사" },
-  { unit: "102호", floor: 1, amount: 150000, note: "" },
+  { unit: "102호", floor: 1, amount: 150000, note: "이사" },
   { unit: "103호", floor: 1, amount: 200000, note: "" },
   { unit: "104호", floor: 1, amount: 200000, note: "" },
   // 2층
